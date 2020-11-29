@@ -408,8 +408,8 @@ See https://github.com/adobe-type-tools/cmap-resources
        var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
   };
-  
-    xhttp.open("POST", "http://timan102.cs.illinois.edu/explanation//explain", true);
+    xhttp.open("POST", "http://localhost:8096/explain", true);
+    // xhttp.open("POST", "http://timan102.cs.illinois.edu/explanation//explain", true);
     var text = window.getSelection().toString();
     xhttp.setRequestHeader("Content-type", "application/json;charset=utf-8");
   xhttp.send(JSON.stringify({ 'searchString':  text }));

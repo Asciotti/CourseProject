@@ -219,26 +219,34 @@ def value_changed():
     print("connected")
 
 
+# @app.route('/explain', methods=['POST','OPTIONS'])
+# @crossdomain(origin='*')
+# def socket_connection(course_name=None, lno=None, slide_name=None, curr_slide=None):
+
+# 	print('HIIIIIIIIIIIIIII')
+# 	search_string = request.json['searchString']
+# 	socketio.emit('message', search_string,broadcast=True)   
+# 	print('HIIIIIIIIIIIIIII')
+# 	print('HIIIIIIIIIIIIIII')
+# 	print('HIIIIIIIIIIIIIII')
+
+# 	print(request,search_string)
+# 	import ipdb; ipdb.set_trace()
+# 	# model.log(request.remote_addr,search_string,datetime.datetime.now(),'search_query')
+# 	# num_results,results,disp_strs,search_course_names,lnos, snippets,lec_names = model.get_search_results(search_string)
+# 	# if not results:
+# 	# 	num_results = 0
+# 	# 	results = []
+# 	return 'OK'
+
 @app.route('/explain', methods=['POST','OPTIONS'])
 @crossdomain(origin='*')
-def socket_connection(course_name=None, lno=None, slide_name=None, curr_slide=None):
-
-	search_string = request.json['searchString']
-	socketio.emit('message', search_string,broadcast=True)   
-	print(request,search_string)
-	# model.log(request.remote_addr,search_string,datetime.datetime.now(),'search_query')
-	# num_results,results,disp_strs,search_course_names,lnos, snippets,lec_names = model.get_search_results(search_string)
-	# if not results:
-	# 	num_results = 0
-	# 	results = []
-	
-	return 'OK'
-
-@app.route('/search', methods=['POST'])
-def results(course_name=None, lno=None, slide_name=None, curr_slide=None):   
+def socket_connection(course_name=None, lno=None, slide_name=None, curr_slide=None): 
+	# import ipdb; ipdb.set_trace()
 	data = json.loads(request.data.decode('utf-8'))
+	print(data)
 	# print(1,1,data)
-	querytext = data['searchString']
+	querytext = data['searchString'].strip()
 	explanation,file_names = model.get_explanation(querytext)
 	if explanation == '':
 		num_results = 0

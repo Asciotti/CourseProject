@@ -1,3 +1,4 @@
+
 import os
 import re 
 import io
@@ -301,11 +302,13 @@ def get_search_results(search):
     return len(results),results,disp_strs,course_names,lnos, snippets,lec_names
 
 def get_explanation(search_string,top_k=1):
+    import ipdb; ipdb.set_trace()
+    print('hi im bob')
     query = metapy.index.Document()
     query.content(search_string)
     print(query)
     # score2(ranker,idx,query)
-    file_id_tups, fn_dict = score2(ranker_obj,idx,query,top_k,alpha)
+    file_id_tups, fn_dict = score1(ranker_obj,idx,query,top_k)#,alpha)
     # print(file_id_tups,fn_dict)
     explanation = ''
     file_names = []
