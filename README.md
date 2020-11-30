@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # EducationalWeb
 
 The following instructions have been tested with Python2.7 on Linux and MacOS
@@ -21,8 +21,8 @@ The following instructions have been tested with Python2.7 on Linux and MacOS
 
 7. The site should be available at http://localhost:8096/
 
-=======
+
 # CourseProject
 
 Please fork this repository and paste the github link of your fork on Microsoft CMT. Detailed instructions are on Coursera under Week 1: Course Project Overview/Week 9 Activities.
->>>>>>> e8480b22d6dbd62fe3fc07cb2d3837401e1c171b
+
