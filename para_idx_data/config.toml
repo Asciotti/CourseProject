@@ -1,7 +1,10 @@
-index = "paras_nohead"
-prefix = "/Users/bhavya/Documents/explanation/UI"
-corpus = "file.toml"
+prefix = "."
+
+
 dataset = "para_idx_data"
+corpus = "file.toml"
+index = "paras_nohead"
+
 query-judgements = "slide-qrels.txt"
 
 [query-runner]
