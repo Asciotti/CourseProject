@@ -301,27 +301,20 @@ def get_search_results(search):
         results[x] = results[x].replace('##', '----') + '.pdf'
     return len(results),results,disp_strs,course_names,lnos, snippets,lec_names
 
-def get_explanation(search_string,top_k=1):
-    import ipdb; ipdb.set_trace()
-    print('hi im bob')
+def get_explanation(search_string, top_k=1, ranker="explaination"):
+    print('Get Explanation')
     query = metapy.index.Document()
     query.content(search_string)
-    print(query)
-    # score2(ranker,idx,query)
-    file_id_tups, fn_dict = score1(ranker_obj,idx,query,top_k)#,alpha)
-    # print(file_id_tups,fn_dict)
-    explanation = ''
+    documents = scorer(ranker_obj, query, top_k)
+
+    explanation = []
     file_names = []
-    for fn,_ in sorted(fn_dict.items(),key=lambda k :k[1],reverse=True)[:top_k]:
-        with open(os.path.join(paras_folder,fn),'r') as f:
-            explanation += f.read().strip()
-            file_names.append(fn)
-    formatted_exp = explanation
-    for w in search_string.lower().split():
-        (sub_str,cnt) = re.subn(re.compile(r"\b{}\b".format(w),re.I),format_string,formatted_exp)
-        if cnt>0:
-            formatted_exp = sub_str
-    return formatted_exp,'#'.join(file_names)
+    for doc in documents:
+        with open(os.path.join(ranker_obj.get("path"), doc), "r") as f:
+            explanation.append(f.read().strip())
+            file_names.append(doc)
+
+    return explanation, file_names
 
 
 

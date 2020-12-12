@@ -12,7 +12,7 @@ var hideExp = function(){
 }
 
 var docDiv = (doc,searchString) => {
-    console.log('bb',doc)
+    console.log('Inside docDiv',doc)
     return(`<div class="card">
      <div class="card-header">
 <div style="display: flex;justify-content: space-between;">
@@ -68,8 +68,9 @@ var doSearch = function(searchString) {
     const data = {
         "searchString": searchString,
     }
-    console.log("2")
+    console.log("DO SEARCH!?!!?")
     console.log(searchString)
+    $("#docs-div").append(`<h3 style="text-align: center;margin-top:20px;">No Explanation Found</h3>`);
     if (searchString!='')
     {
        
@@ -129,6 +130,7 @@ var doSearch = function(searchString) {
     });
 }
 }
+
 
 
 
