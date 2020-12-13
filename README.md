@@ -87,7 +87,14 @@ IR models can be applied here, but they aren't sufficient for the following reas
 
 Given the network we used, it was not possible to add any weighting/favoring towards generating sentences with the query word.
 
+# Demo
 
+The demo is provided via the video tutorial found here:
+
+The slide used to demo can be found here (given the app is running and you can connnect to it:
+http://localhost:8096/next_slide/cs-410/86/cs-410----13_week-12----02_week-12-lessons----05_12-5-contextual-text-mining-contextual-probabilistic-latent-semantic-analysis_TM-42-cplsa.txt----slide2.pdf
+
+The two examples we will go through are for `Themes` and `Coverage`.
 
 
 
