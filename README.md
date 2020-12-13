@@ -3,7 +3,7 @@
 
 # Setup
 
-The following instructions have been tested with Python3.7 on Windows
+The following instructions have been tested with Python3.7 on Windows.
 
 1. You should have ElasticSearch installed and running -- https://www.elastic.co/guide/en/elasticsearch/reference/current/targz.html
 
@@ -19,7 +19,7 @@ The following instructions have been tested with Python3.7 on Windows
    
 5. From `EducationalWeb/pdf.js/build/generic/web` , run the following command: `gulp server`
 
-6. In another terminal, setup your python environment (requires python 3.7) by running `pip install -r requirements.txt`.
+6. In another terminal, setup your python environment (requires python 3.7 - I recommend making a clean venv/conda environment) by running `pip install -r requirements.txt`.
 
 7. Run `python app.py` from `EducationalWeb/`
 
