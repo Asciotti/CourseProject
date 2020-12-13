@@ -17,15 +17,19 @@ The following instructions have been tested with Python3.7 on Windows.
    
    Unzip the file and place the folder under `EducationalWeb/pdf.js/static/slides/`
    
-5. From `EducationalWeb/pdf.js/build/generic/web` , run the following command: `gulp server`
+5. Download lemur-stopwords.txt from here -- https://raw.githubusercontent.com/meta-toolkit/meta/master/data/lemur-stopwords.txt
 
-6. In another terminal, setup your python environment (requires python 3.7 - I recommend making a clean venv/conda environment) by running `pip install -r requirements.txt`.
+   `lemur-stopwords.txt` needs to be placed under `EducationalWeb`
+   
+6. From `EducationalWeb/pdf.js/build/generic/web` , run the following command: `gulp server`
 
-7. Run `python app.py` from `EducationalWeb/`
+7. In another terminal, setup your python environment (requires python 3.7 - I recommend making a clean venv/conda environment) by running `pip install -r requirements.txt`.
 
-7. The site should be available at http://localhost:8096/
+8. Run `python app.py` from `EducationalWeb/`
 
-8. Run through the examples (at the end of the video tutorial) to see the usage and benefits of the summarization.
+9. The site should be available at http://localhost:8096/
+
+10. Run through the examples (at the end of the video tutorial) to see the usage and benefits of the summarization.
 
 
 # Motivation:
