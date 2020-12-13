@@ -5,7 +5,11 @@
 
 The following instructions have been tested with Python3.7 on Windows.
 
-1. You should have ElasticSearch installed and running -- https://www.elastic.co/guide/en/elasticsearch/reference/current/targz.html
+1. You should have ElasticSearch installed and running 
+
+   Ubuntu - https://www.elastic.co/guide/en/elasticsearch/reference/current/targz.html
+   Windows - https://www.elastic.co/guide/en/elasticsearch/reference/current/windows.html
+   MacOs - https://www.elastic.co/guide/en/elasticsearch/reference/current/brew.html
 
 2. Create the index in ElasticSearch by running `python create_es_index.py` from `EducationalWeb/`
 
@@ -19,7 +23,7 @@ The following instructions have been tested with Python3.7 on Windows.
    
 5. Download lemur-stopwords.txt from here -- https://raw.githubusercontent.com/meta-toolkit/meta/master/data/lemur-stopwords.txt
 
-   `lemur-stopwords.txt` needs to be placed under `EducationalWeb`
+   `lemur-stopwords.txt` needs to be placed under `EducationalWeb/`
    
 6. From `EducationalWeb/pdf.js/build/generic/web` , run the following command: `gulp server`
 
