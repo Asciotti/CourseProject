@@ -10,6 +10,9 @@ from nltk.tokenize import sent_tokenize
 from nltk.cluster.util import cosine_distance
 import numpy as np
 import networkx as nx
+
+def extractive_summary(text):
+    pass
  
 def read_article(file_name):
     file = open(file_name, "r")
@@ -62,31 +65,49 @@ def build_similarity_matrix(sentences, stop_words):
     return similarity_matrix
 
 
-def generate_summary(file_name, top_n=5):
+def generate_summary(file_name, query, top_n=5, add_weights_flag=True):
     stop_words = stopwords.words('english')
     summarize_text = []
 
     # Step 1 - Read text anc split it
     sentences =  read_article(file_name)
 
+    # If the results are already small just return
+    if len(sentences) < 6:
+        sentences = [ " ".join(x) for x in sentences]
+        return " ".join(sentences)
+
     # Step 2 - Generate Similary Martix across sentences
     sentence_similarity_martix = build_similarity_matrix(sentences, stop_words)
+    # import ipdb; ipdb.set_trace()
 
     # Step 3 - Rank sentences in similarity martix
     sentence_similarity_graph = nx.from_numpy_array(sentence_similarity_martix)
-    scores = nx.pagerank(sentence_similarity_graph)
+
+    # Add weighting towards the query word to increase likelihood sentence w/ that word is chosen
+    weights = {}
+    for i, sent in enumerate(sentences):
+        if query in sent and add_weights_flag:
+            weights[i] = 1
+        else:
+            weights[i] = 0.0001
+
+    scores = nx.pagerank(sentence_similarity_graph, personalization=weights)
+    # nx.draw(sentence_similarity_graph, with_labels=True, font_weight='bold')
+    # plt.show();plt.pause(0)
 
     # Step 4 - Sort the rank and pick top sentences
     ranked_sentence = sorted(((scores[i],s) for i,s in enumerate(sentences)), reverse=True)    
-    print "Indexes of top ranked_sentence order are "
-    for s in ranked_sentence:
-        print s
-    # import ipdb; ipdb.set_trace()
+    # print ("Indexes of top ranked_sentence order are ")
+    # for s in ranked_sentence:
+    #     print (s)
     for i in range(top_n):
       summarize_text.append(" ".join(ranked_sentence[i][1]))
 
-    # Step 5 - Offcourse, output the summarize texr
-    print "\n\n\nSummarize Text: \n", " ".join(summarize_text)
+    # # Step 5 - Offcourse, output the summarize texr
+    # print("\n\n\nSummarize Text: \n", " ".join(summarize_text))
+    summarize_text = " ".join(summarize_text)
+    return summarize_text
 
-# let's begin
-generate_summary( "para_idx_data/628.txt", 2)
+if __name__ == '__main__':
+    print(generate_summary( "para_idx_data/179.txt", 'annotations', 3))

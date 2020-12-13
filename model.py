@@ -6,6 +6,8 @@ import numpy as np
 import pickle
 from elasticsearch import Elasticsearch
 from ranker import *
+from extractive_summarizer import generate_summary
+from abstract_summarizer import abstract_summary
 
 
 main_path = os.path.dirname(os.path.realpath(__file__))
@@ -301,8 +303,9 @@ def get_search_results(search):
         results[x] = results[x].replace('##', '----') + '.pdf'
     return len(results),results,disp_strs,course_names,lnos, snippets,lec_names
 
-def get_explanation(search_string, top_k=1, ranker="explaination"):
+def get_explanation(search_string, top_k=1, summarizer=""):
     print('Get Explanation')
+    search_string = search_string.strip().lower()
     query = metapy.index.Document()
     query.content(search_string)
     documents = scorer(ranker_obj, query, top_k)
@@ -312,9 +315,18 @@ def get_explanation(search_string, top_k=1, ranker="explaination"):
     for doc in documents:
         with open(os.path.join(ranker_obj.get("path"), doc), "r") as f:
             explanation.append(f.read().strip())
-            file_names.append(doc)
-
-    return explanation, file_names
+            file_names.append(os.path.join(ranker_obj.get("path"), doc))
+    
+    if summarizer.upper() == "EXTRACT":
+        summary = generate_summary(file_names[0], search_string)
+        summary = "Extractive Summary:\n" + summary
+        return summary, file_names
+    elif summarizer.upper() == "ABSTRACT":
+        summary = abstract_summary(explanation[0])
+        summary = "Abstract Summary:\n" + summary
+        return summary, file_names
+    else:
+        return explanation, file_names
 
 
 

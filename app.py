@@ -10,6 +10,8 @@ from datetime import timedelta
 from flask_socketio import SocketIO
 
 
+SUMMARIZER="ABSTRACT"
+
 app = Flask(__name__, instance_relative_config=True)
 
 app.secret_key =b'\xaa\x12\xce\xdf\xc3\xb1\x90\xd8!z\xe6\xe9V\x82<r'
@@ -240,7 +242,7 @@ def results(course_name=None, lno=None, slide_name=None, curr_slide=None):
     querytext = request.json.get("searchString", None)
     if not querytext:
         return jsonify({})
-    explanation, file_names = model.get_explanation(querytext)
+    explanation, file_names = model.get_explanation(querytext, summarizer=SUMMARIZER)
     if explanation == "":
         num_results = 0
     else:

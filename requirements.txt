@@ -1,9 +1,7 @@
 --find-links https://download.pytorch.org/whl/torch_stable.html
-# transformers[torch]
-# transformers
-# torch==1.7.0+cpu
-# torchvision==0.8.1+cpu
-# torchaudio===0.7.0
+transformers
+torch==1.7.0+cpu
+torchvision==0.8.1+cpu
 flask
 metapy
 pytoml

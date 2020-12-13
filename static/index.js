@@ -70,7 +70,6 @@ var doSearch = function(searchString) {
     }
     console.log("DO SEARCH!?!!?")
     console.log(searchString)
-    $("#docs-div").append(`<h3 style="text-align: center;margin-top:20px;">No Explanation Found</h3>`);
     if (searchString!='')
     {
        
