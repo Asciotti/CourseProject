@@ -3,6 +3,12 @@
 
 TUTORIAL FOUND HERE: https://mediaspace.illinois.edu/media/1_5ohs6cp4
 
+- If you are not familiar with the EducationalWeb, it is a resource provided that contains a multitude of features related to the lectures slides including: 
+    - search term throughout slides/audio
+    - Downloading slides
+    - Providing reference to slides that are related
+    - "Explain" highlighted words on the slides
+
 # Setup
 
 The following instructions have been tested with Python3.7.9 on Windows.
