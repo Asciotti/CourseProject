@@ -110,8 +110,8 @@ Hit save file. Wait a few seconds for the page to reload.
 Highlight "coverage" again and hit the explain button. See the abstract summarized "Explanation".
 
 
-[1] https://www.quora.com/Natural-Language-Processing-What-is-the-difference-between-extractive-and-abstractive-summarization
-[2] https://towardsdatascience.com/understand-text-summarization-and-create-your-own-summarizer-in-python-b26a9f09fc70
-[3] https://huggingface.co/blog/how-to-generate
-[4] https://huggingface.co/
-[5] https://web.eecs.umich.edu/~mihalcea/papers/mihalcea.emnlp04.pdf
+[1] https://www.quora.com/Natural-Language-Processing-What-is-the-difference-between-extractive-and-abstractive-summarization  
+[2] https://towardsdatascience.com/understand-text-summarization-and-create-your-own-summarizer-in-python-b26a9f09fc70  
+[3] https://huggingface.co/blog/how-to-generate  
+[4] https://huggingface.co/  
+[5] https://web.eecs.umich.edu/~mihalcea/papers/mihalcea.emnlp04.pdf  
