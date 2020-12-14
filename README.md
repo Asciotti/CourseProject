@@ -5,35 +5,37 @@
 
 The following instructions have been tested with Python3.7 on Windows.
 
-1. You should have ElasticSearch installed and running 
+* You should have ElasticSearch installed and running 
 
    Ubuntu - https://www.elastic.co/guide/en/elasticsearch/reference/current/targz.html
    Windows - https://www.elastic.co/guide/en/elasticsearch/reference/current/windows.html
    MacOs - https://www.elastic.co/guide/en/elasticsearch/reference/current/brew.html
 
-2. Create the index in ElasticSearch by running `python create_es_index.py` from `EducationalWeb/`
 
-3. Download tfidf_outputs.zip from here -- https://drive.google.com/file/d/19ia7CqaHnW3KKxASbnfs2clqRIgdTFiw/view?usp=sharing
+
+* Download tfidf_outputs.zip from here -- https://drive.google.com/file/d/19ia7CqaHnW3KKxASbnfs2clqRIgdTFiw/view?usp=sharing
    
    Unzip the file and place the folder under `EducationalWeb/static`
 
-4. Download cs410.zip from here -- https://drive.google.com/file/d/1Xiw9oSavOOeJsy_SIiIxPf4aqsuyuuh6/view?usp=sharing
+* Download cs410.zip from here -- https://drive.google.com/file/d/1Xiw9oSavOOeJsy_SIiIxPf4aqsuyuuh6/view?usp=sharing
    
    Unzip the file and place the folder under `EducationalWeb/pdf.js/static/slides/`
    
-5. Download lemur-stopwords.txt from here -- https://raw.githubusercontent.com/meta-toolkit/meta/master/data/lemur-stopwords.txt
+* Download lemur-stopwords.txt from here -- https://raw.githubusercontent.com/meta-toolkit/meta/master/data/lemur-stopwords.txt
 
    `lemur-stopwords.txt` needs to be placed under `EducationalWeb/`
    
-6. From `EducationalWeb/pdf.js/build/generic/web` , run the following command: `gulp server`
+* From `EducationalWeb/pdf.js/build/generic/web` , run the following command: `gulp server`
 
-7. In another terminal, setup your python environment (requires python 3.7 - I recommend making a clean venv/conda environment) by running `pip install -r requirements.txt`.
+* In another terminal, setup your python environment (requires python 3.7 - I recommend making a clean venv/conda environment) by running `pip install -r requirements.txt`.
 
-8. Run `python app.py` from `EducationalWeb/`
+* Create the index in ElasticSearch by running `python create_es_index.py` from `EducationalWeb/`
 
-9. The site should be available at http://localhost:8096/
+* Run `python app.py` from `EducationalWeb/`
 
-10. Run through the examples (at the end of the video tutorial) to see the usage and benefits of the summarization.
+* The site should be available at http://localhost:8096/
+
+* Run through the examples (at the end of the video tutorial) to see the usage and benefits of the summarization.
 
 
 # Motivation:
