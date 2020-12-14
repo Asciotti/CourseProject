@@ -7,10 +7,10 @@ The following instructions have been tested with Python3.7.9 on Windows.
 
 * You should have ElasticSearch installed and running 
 
-   Ubuntu - https://www.elastic.co/guide/en/elasticsearch/reference/current/targz.html
-   Windows - https://www.elastic.co/guide/en/elasticsearch/reference/current/windows.html
-   MacOs - https://www.elastic.co/guide/en/elasticsearch/reference/current/brew.html
-
+   Ubuntu - https://www.elastic.co/guide/en/elasticsearch/reference/current/targz.html  
+   Windows - https://www.elastic.co/guide/en/elasticsearch/reference/current/windows.html  
+   MacOs - https://www.elastic.co/guide/en/elasticsearch/reference/current/brew.html  
+ 
 
 
 * Download tfidf_outputs.zip from here -- https://drive.google.com/file/d/19ia7CqaHnW3KKxASbnfs2clqRIgdTFiw/view?usp=sharing
