@@ -99,12 +99,14 @@ The word example we will go through is for `Coverage` in the above slides.
 If you don't want to go through the video. Go through the installation above such that you can see the slides.  
 Go to those specific set of slides (click on link).  
 Highlight "coverage" in the bottom right corner and hit the box with the graduation cap on it in the top right. If you hover over the boxes it shoulds say "Explain selected text"
-You should see the unmodified "Explanation"
+You should see the unmodified "Explanation"  
 
-Now go to your text editor and open `app.py`. Modify `SUMMARIZER=""` to `SUMMARIZER="EXTRACT"`. Hit save file. Wait a few seconds for the page to reload.
+Now go to your text editor and open `app.py`. Modify `SUMMARIZER=""` to `SUMMARIZER="EXTRACT"`.  
+Hit save file. Wait a few seconds for the page to reload.  
 Highlight "coverage" again and hit the explain button. See the extractive summarized "Explanation".
 
-Now go to your text editor and open `app.py`. Modify `SUMMARIZER="EXTRACT"` to `SUMMARIZER="ABSTRACT"`. Hit save file. Wait a few seconds for the page to reload.
+Now go to your text editor and open `app.py`. Modify `SUMMARIZER="EXTRACT"` to `SUMMARIZER="ABSTRACT"`.   
+Hit save file. Wait a few seconds for the page to reload.  
 Highlight "coverage" again and hit the explain button. See the abstract summarized "Explanation".
 
 
