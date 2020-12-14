@@ -124,11 +124,11 @@ Highlight "coverage" in the bottom right corner and hit the box with the graduat
 You should see the unmodified "Explanation"  
 
 Now go to your text editor and open `app.py`. Modify `SUMMARIZER=""` to `SUMMARIZER="EXTRACT"` located at the top of the file.  
-Hit save file. Wait a few seconds for the page to reload.  
+Hit save file. Wait a few seconds then reload the page.  
 Highlight "coverage" again and hit the explain button. See the extractive summarized "Explanation".
 
 Now go to your text editor and open `app.py`. Modify `SUMMARIZER="EXTRACT"` to `SUMMARIZER="ABSTRACT"` located at the top of the file.  
-Hit save file. Wait a few seconds for the page to reload.  
+Hit save file. Wait a few seconds then reload the page.  
 Highlight "coverage" again and hit the explain button. See the abstract summarized "Explanation".
 
 # References
