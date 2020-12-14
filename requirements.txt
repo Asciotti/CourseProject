@@ -1,11 +1,14 @@
 --find-links https://download.pytorch.org/whl/torch_stable.html
-transformers
+elasticsearch==7.10.1
+Flask==1.1.2
+Flask-SocketIO==5.0.0
+metapy==0.2.13
+networkx==2.5
+nltk==3.5
+numpy==1.19.4
+pytoml==0.1.21
+rank-bm25==0.2.1
+sentencepiece==0.1.94
 torch==1.7.0+cpu
 torchvision==0.8.1+cpu
-flask
-metapy
-pytoml
-elasticsearch
-flask_socketio
-numpy
-rank_bm25
+transformers==4.0.1

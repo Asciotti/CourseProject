@@ -10,7 +10,7 @@ from datetime import timedelta
 from flask_socketio import SocketIO
 
 
-SUMMARIZER="ABSTRACT"
+SUMMARIZER=""
 
 app = Flask(__name__, instance_relative_config=True)
 

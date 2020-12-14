@@ -82,7 +82,6 @@ if __name__ == '__main__':
         sys.exit(1)
 
     start_time = time.time()
-    import ipdb; ipdb.set_trace()
     ranker = load_ranker(cfg,2500)
 
 

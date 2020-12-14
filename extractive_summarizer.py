@@ -79,7 +79,6 @@ def generate_summary(file_name, query, top_n=5, add_weights_flag=True):
 
     # Step 2 - Generate Similary Martix across sentences
     sentence_similarity_martix = build_similarity_matrix(sentences, stop_words)
-    # import ipdb; ipdb.set_trace()
 
     # Step 3 - Rank sentences in similarity martix
     sentence_similarity_graph = nx.from_numpy_array(sentence_similarity_martix)
