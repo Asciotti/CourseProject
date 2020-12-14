@@ -28,6 +28,7 @@ The following instructions have been tested with Python3.7.9 on Windows.
 * From `EducationalWeb/pdf.js/build/generic/web` , run the following command: `gulp server`
 
 * In another terminal, setup your python environment (requires python 3.7.9 - I recommend making a clean venv/conda environment) by running `pip install -r requirements.txt`.
+   * If using conda, the following is a useful command to make the correct environment `conda create --name uiuc3.7 python=3.7.9`
 
 * Create the index in ElasticSearch by running `python create_es_index.py` from `EducationalWeb/`
 
