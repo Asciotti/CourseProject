@@ -94,8 +94,18 @@ The demo is provided via the video tutorial found here:
 The slide used to demo can be found here (given the app is running and you can connnect to it:
 http://localhost:8096/next_slide/cs-410/86/cs-410----13_week-12----02_week-12-lessons----05_12-5-contextual-text-mining-contextual-probabilistic-latent-semantic-analysis_TM-42-cplsa.txt----slide2.pdf
 
-The two examples we will go through are for `Themes` and `Coverage`.
+The word example we will go through is for `Coverage` in the above slides.
 
+If you don't want to go through the video. Go through the installation above such that you can see the slides.  
+Go to those specific set of slides (click on link).  
+Highlight "coverage" in the bottom right corner and hit the box with the graduation cap on it in the top right. If you hover over the boxes it shoulds say "Explain selected text"
+You should see the unmodified "Explanation"
+
+Now go to your text editor and open `app.py`. Modify `SUMMARIZER=""` to `SUMMARIZER="EXTRACT"`. Hit save file. Wait a few seconds for the page to reload.
+Highlight "coverage" again and hit the explain button. See the extractive summarized "Explanation".
+
+Now go to your text editor and open `app.py`. Modify `SUMMARIZER="EXTRACT"` to `SUMMARIZER="ABSTRACT"`. Hit save file. Wait a few seconds for the page to reload.
+Highlight "coverage" again and hit the explain button. See the abstract summarized "Explanation".
 
 
 [1] https://www.quora.com/Natural-Language-Processing-What-is-the-difference-between-extractive-and-abstractive-summarization
