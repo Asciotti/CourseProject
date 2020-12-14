@@ -1,6 +1,8 @@
 
 # EducationalWeb
 
+TUTORIAL FOUND HERE: https://mediaspace.illinois.edu/media/1_5ohs6cp4
+
 # Setup
 
 The following instructions have been tested with Python3.7.9 on Windows.
@@ -103,7 +105,7 @@ Below will highlight a fews places in the code that are specific to the augmenta
 
 # Demo
 
-The demo is provided via the video tutorial found here:
+The demo is provided via the video tutorial found here: https://mediaspace.illinois.edu/media/1_5ohs6cp4
 
 The slide used to demo can be found here (given the app is running and you can connnect to it:
 http://localhost:8096/next_slide/cs-410/86/cs-410----13_week-12----02_week-12-lessons----05_12-5-contextual-text-mining-contextual-probabilistic-latent-semantic-analysis_TM-42-cplsa.txt----slide2.pdf
