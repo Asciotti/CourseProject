@@ -90,6 +90,17 @@ IR models can be applied here, but they aren't sufficient for the following reas
 
 Given the network we used, it was not possible to add any weighting/favoring towards generating sentences with the query word.
 
+# Overview of selected pieces of code
+
+Below will highlight a fews places in the code that are specific to the augmentation of the Explanation functionality. This code base is large but most of it is related to the web based portion whereas a select few python files are used to actually perform much of the backend functionality.
+
+`app.py` : Contains the flask server code, handles various API calls (unmodified)  
+`model.py` : Handles the model that performs document-query retreival. `get_explanation` is the function that returns the Explanation results. Inside this function is where the main "injection" occurrs. After we retrieve the normal explanation (aka the highest scoring document), we feed that result directly into the summarizer functions.  
+`ranker.py` : Retrieves the highest ranking documents given the query word and corpus. Replaced metapy ranker w/ `rank_bm25` 3rd party package due to bugs.  
+`extractive_summarizer.py` : Contains extractive summary code, if run alone via command line, will summarize an example text.  
+`abstract_summarizer.py` : Contains abstract summary code, if run alone via command line, will summarize an example text.  
+
+
 # Demo
 
 The demo is provided via the video tutorial found here:
@@ -104,15 +115,15 @@ Go to those specific set of slides (click on link).
 Highlight "coverage" in the bottom right corner and hit the box with the graduation cap on it in the top right. If you hover over the boxes it shoulds say "Explain selected text"
 You should see the unmodified "Explanation"  
 
-Now go to your text editor and open `app.py`. Modify `SUMMARIZER=""` to `SUMMARIZER="EXTRACT"`.  
+Now go to your text editor and open `app.py`. Modify `SUMMARIZER=""` to `SUMMARIZER="EXTRACT"` located at the top of the file.  
 Hit save file. Wait a few seconds for the page to reload.  
 Highlight "coverage" again and hit the explain button. See the extractive summarized "Explanation".
 
-Now go to your text editor and open `app.py`. Modify `SUMMARIZER="EXTRACT"` to `SUMMARIZER="ABSTRACT"`.   
+Now go to your text editor and open `app.py`. Modify `SUMMARIZER="EXTRACT"` to `SUMMARIZER="ABSTRACT"` located at the top of the file.  
 Hit save file. Wait a few seconds for the page to reload.  
 Highlight "coverage" again and hit the explain button. See the abstract summarized "Explanation".
 
-
+# References
 [1] https://www.quora.com/Natural-Language-Processing-What-is-the-difference-between-extractive-and-abstractive-summarization  
 [2] https://towardsdatascience.com/understand-text-summarization-and-create-your-own-summarizer-in-python-b26a9f09fc70  
 [3] https://huggingface.co/blog/how-to-generate  
